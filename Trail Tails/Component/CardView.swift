@@ -14,25 +14,55 @@ struct CardView: View {
         ZStack {
             CustomBackgroundView()
             
-            ZStack {
-                Circle()
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                Color.customIndigoMedium,
-                                Color.customSalmonLight
-                            ],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
-                    .frame(width: 256, height: 256)
+            VStack {
+                // MARK: - Header
                 
-                Image("image-1")
-                    .resizable()
-                    .scaledToFit()
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("Hiking")
+                            .fontWeight(.black)
+                            .font(.system(size: 52))
+                            .foregroundStyle(
+                                LinearGradient(
+                                    colors: [
+                                        .customGrayLight,
+                                        .customGrayMedium
+                                    ],
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing)
+                            )
+                    }
+                    Text("Fun and enjoyable outdoor activity for friends and families")
+                        .multilineTextAlignment(.leading)
+                        .italic()
+                        .foregroundColor(.customGrayMedium)
+                }
+                .padding(.horizontal, 30)
+                
+                // MARK: - Main Content
+                
+                ZStack {
+                    Circle()
+                        .fill(
+                            LinearGradient(
+                                colors: [
+                                    Color.customIndigoMedium,
+                                    Color.customSalmonLight
+                                ],
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
+                        )
+                        .frame(width: 256, height: 256)
+                    
+                    Image("image-1")
+                        .resizable()
+                        .scaledToFit()
+                }
+                
+                // MARK: - Footer
             }
-        } //: Card
+        }
         .frame(width: 320, height: 570)
     }
 }
