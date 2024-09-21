@@ -31,8 +31,16 @@ struct CardView: View {
                                     startPoint: .topLeading,
                                     endPoint: .bottomTrailing)
                             )
+                        
+                        Spacer()
+                        
+                        Button {
+                            // Action: Show a sheet
+                        } label: {
+                            CustomButtonView()
+                        }
                     }
-                    Text("Fun and enjoyable outdoor activity for friends and families")
+                    Text("A fun and enjoyable outdoor activity for friends and families")
                         .multilineTextAlignment(.leading)
                         .italic()
                         .foregroundColor(.customGrayMedium)
