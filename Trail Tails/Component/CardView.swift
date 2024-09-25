@@ -18,7 +18,7 @@ struct CardView: View {
     
     func randomImage() {
         repeat {
-            randomNumber = Int.random(in: 1...5)
+            randomNumber = Int.random(in: 1...3)
         } while randomNumber == imageNumber
         
         imageNumber = randomNumber
