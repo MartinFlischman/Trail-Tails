@@ -20,6 +20,7 @@ struct SettingsView: View {
                     VStack(spacing: -10) {
                         Text("Trail Tails")
                             .font(.system(size: 40, weight: .black))
+                            .padding(.bottom, 6)
                         
                         Text("Editors' Choice")
                             .fontWeight(.medium)
