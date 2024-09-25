@@ -14,14 +14,12 @@ struct SettingsView: View {
             
             Section {
                 HStack {
-                    Spacer()
-                    
                     Image(systemName: "laurel.leading")
                         .font(.system(size: 80, weight: .black))
                     
                     VStack(spacing: -10) {
                         Text("Trail Tails")
-                            .font(.system(size: 66, weight: .black))
+                            .font(.system(size: 40, weight: .black))
                         
                         Text("Editors' Choice")
                             .fontWeight(.medium)
@@ -29,8 +27,6 @@ struct SettingsView: View {
                     
                     Image(systemName: "laurel.trailing")
                         .font(.system(size: 80, weight: .black))
-                    
-                    Spacer()
                 }
                 .foregroundStyle(
                     LinearGradient(
