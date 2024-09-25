@@ -20,7 +20,7 @@ struct SettingsView: View {
                         .font(.system(size: 80, weight: .black))
                     
                     VStack(spacing: -10) {
-                        Text("Hike")
+                        Text("Trail Tails")
                             .font(.system(size: 66, weight: .black))
                         
                         Text("Editors' Choice")
