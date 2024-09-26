@@ -65,6 +65,21 @@ struct SettingsView: View {
             
             
             // MARK: - Section: About
+            
+            Section(
+                header: Text("About The App"),
+                footer: HStack {
+                    Spacer()
+                    Text("Copyright © All rights reserved.")
+                    Spacer()
+                }
+                    .padding(.vertical, 8)
+            ) {
+                // 1. Basic labeled content
+                LabeledContent("Application", value: "Trail Tails")
+                
+                // 2. Advanced Labeled content
+            }
         }
     }
 }
