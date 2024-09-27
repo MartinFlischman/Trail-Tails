@@ -76,19 +76,20 @@ struct SettingsView: View {
                     .padding(.vertical, 8)
             ) {
         
-                CustomListRowView(rowTintColor: .blue, rowIcon: "apps.iphone", rowLabel: "Application", rowContent: "Trail Tails")
+                CustomListRowView(rowTintColor: .mint, rowIcon: "apps.iphone", rowLabel: "Application", rowContent: "Trail Tails")
                 
                 CustomListRowView(rowTintColor: .pink, rowIcon: "gear", rowLabel: "Version", rowContent: "1.0")
                 
-                CustomListRowView(rowTintColor: .green, rowIcon: "info.circle", rowLabel: "Compatibility", rowContent: "iOS & iPadOS 17.6+")
+                CustomListRowView(rowTintColor: .gray, rowIcon: "info.circle", rowLabel: "Compatibility", rowContent: "iOS & iPadOS 17.6+")
                 
                 CustomListRowView(rowTintColor: .orange, rowIcon: "swift", rowLabel: "Technology", rowContent: "Swift")
                 
                 CustomListRowView(rowTintColor: .purple, rowIcon: "ellipsis.curlybraces", rowLabel: "Developer", rowContent: "Martin Flischman")
                 
-                CustomListRowView(rowTintColor: .gray, rowIcon: "paintpalette", rowLabel: "Designer", rowContent: "Robert Petras")
+                CustomListRowView(rowTintColor: .green, rowIcon: "paintpalette", rowLabel: "Designer", rowContent: "Robert Petras")
                 
-                CustomListRowView(rowTintColor: .mint, rowIcon: "globe", rowLabel: "Website", rowContent: "https://credo.academy/")
+                CustomListRowView(rowTintColor: .blue, rowIcon: "globe", rowLabel: "Website", rowLinkLabel: "Trail Tails", rowLinkDestination: "https://github.com/MartinFlischman/Trail-Tails")
+                
             }
         }
     }

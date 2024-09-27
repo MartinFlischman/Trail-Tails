@@ -13,14 +13,24 @@ struct CustomListRowView: View {
     @State var rowTintColor: Color
     @State var rowIcon: String
     @State var rowLabel: String
-    @State var rowContent: String
+    @State var rowContent: String? = nil
+    @State var rowLinkLabel: String? = nil
+    @State var rowLinkDestination: String? = nil
     
     var body: some View {
         LabeledContent {
             // Content
-            Text(rowContent)
-                .foregroundColor(.primary)
-                .fontWeight(.heavy)
+            if rowContent != nil {
+                Text(rowContent!)
+                    .foregroundColor(.primary)
+                    .fontWeight(.heavy)
+            } else if (rowLinkLabel != nil && rowLinkDestination != nil) {
+                Link(rowLinkLabel!, destination: URL(string: rowLinkDestination!)!)
+                    .foregroundColor(.blue)
+                    .fontWeight(.heavy)
+            } else {
+                /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
+            }
         } label: {
             // Label
             HStack {
@@ -43,9 +53,11 @@ struct CustomListRowView: View {
     List {
         CustomListRowView(
             rowTintColor: .blue,
-            rowIcon: "paintpalette",
-            rowLabel: "Designer",
-            rowContent: "Jack Frost"
+            rowIcon: "globe",
+            rowLabel: "Website",
+            rowContent: nil,
+            rowLinkLabel: "Trail Tails",
+            rowLinkDestination: "https://github.com/MartinFlischman/Trail-Tails"
         )
     }
 }
