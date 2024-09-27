@@ -25,7 +25,6 @@ struct CustomBackgroundView: View {
                 .opacity(0.85)
             
             // MARK: - 1. Surface
-
                         
             LinearGradient(
                 colors: [
